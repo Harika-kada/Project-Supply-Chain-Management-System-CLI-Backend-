@@ -1,5 +1,7 @@
 package com.company.scm.exception;
 
-public class DuplicateEntityException {
-
+public class DuplicateEntityException extends Exception {
+    public DuplicateEntityException(String message) {
+        super(message);
+    }
 }
