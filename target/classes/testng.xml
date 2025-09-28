@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SupplyChainManagementSystem_Project_Suite" verbose="2" parallel="tests" thread-count="2">
+
+    <test name="SCMS_Business_Logic_Validation">
+        <groups>
+            <run>
+                <include name="inventory"/>
+                <include name="orders"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.company.scm.service"/>
+        </packages>
+    </test>
+
+    <test name="SCMS_Repository_And_Reporting_UnitTests">
+        <classes>
+            <class name="com.company.scm.repository.ProductRepositoryTest"/>
+            <class name="com.company.scm.service.ReportServiceTest"/>
+        </classes>
+    </test>
+</suite>
