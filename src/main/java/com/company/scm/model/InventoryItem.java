@@ -1,5 +1,7 @@
 package com.company.scm.model;
 
+import java.time.LocalDate;
+
 public class InventoryItem {
     private final String itemId;
     private final String productId;
