@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="17" passed="3" failed="4" skipped="8">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-30T20:30:50 IST" name="SupplyChainManagementSystem_Project_Suite" finished-at="2025-09-30T20:30:50 IST" duration-ms="871">
+    <groups>
+      <group name="report">
+        <method signature="ReportServiceTest.testPrintInventoryReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" name="testPrintInventoryReport" class="com.company.scm.service.ReportServiceTest"/>
+        <method signature="ReportServiceTest.testPrintLowStockReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" name="testPrintLowStockReport" class="com.company.scm.service.ReportServiceTest"/>
+      </group> <!-- report -->
+      <group name="orders">
+        <method signature="OrderServiceTest.testFulfillSalesOrder_Success()[pri:1, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" name="testFulfillSalesOrder_Success" class="com.company.scm.service.OrderServiceTest"/>
+        <method signature="OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException()[pri:2, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" name="testFulfillSalesOrder_InsufficientStock_ThrowsException" class="com.company.scm.service.OrderServiceTest"/>
+      </group> <!-- orders -->
+      <group name="repository">
+        <method signature="ProductRepositoryTest.testFindAll()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" name="testFindAll" class="com.company.scm.repository.ProductRepositoryTest"/>
+        <method signature="ProductRepositoryTest.testFindById_NotFound()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" name="testFindById_NotFound" class="com.company.scm.repository.ProductRepositoryTest"/>
+        <method signature="ProductRepositoryTest.testFindById_Success()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" name="testFindById_Success" class="com.company.scm.repository.ProductRepositoryTest"/>
+      </group> <!-- repository -->
+      <group name="inventory">
+        <method signature="InventoryServiceTest.testAddStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testAddStockSuccess" class="com.company.scm.service.InventoryServiceTest"/>
+        <method signature="InventoryServiceTest.testAddStock_ZeroQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testAddStock_ZeroQuantity_ThrowsException" class="com.company.scm.service.InventoryServiceTest"/>
+        <method signature="InventoryServiceTest.testRemoveStockExceedingQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testRemoveStockExceedingQuantity_ThrowsException" class="com.company.scm.service.InventoryServiceTest"/>
+        <method signature="InventoryServiceTest.testRemoveStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testRemoveStockSuccess" class="com.company.scm.service.InventoryServiceTest"/>
+        <method signature="InventoryServiceTest.testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testStockTransferUpdatesBothWarehouses" class="com.company.scm.service.InventoryServiceTest"/>
+        <method signature="InventoryServiceTest.testTransferStock_InvalidDestination_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testTransferStock_InvalidDestination_ThrowsException" class="com.company.scm.service.InventoryServiceTest"/>
+      </group> <!-- inventory -->
+    </groups>
+    <test started-at="2025-09-30T20:30:50 IST" name="SCMS_Repository_And_Reporting_UnitTests" finished-at="2025-09-30T20:30:50 IST" duration-ms="845">
+      <class name="com.company.scm.service.ReportServiceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPrintInventoryReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="testPrintInventoryReport" finished-at="2025-09-30T20:30:50 IST" duration-ms="27" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.company.scm.service.ReportServiceTest.testPrintInventoryReport(ReportServiceTest.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrintInventoryReport -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPrintLowStockReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="testPrintLowStockReport" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.company.scm.service.ReportServiceTest.testPrintLowStockReport(ReportServiceTest.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrintLowStockReport -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.company.scm.service.ReportServiceTest -->
+      <class name="com.company.scm.repository.ProductRepositoryTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFindAll()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="testFindAll" finished-at="2025-09-30T20:30:50 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindAll -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method signature="testFindById_NotFound()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="testFindById_NotFound" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindById_NotFound -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFindById_Success()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="testFindById_Success" finished-at="2025-09-30T20:30:50 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindById_Success -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.company.scm.repository.ProductRepositoryTest -->
+    </test> <!-- SCMS_Repository_And_Reporting_UnitTests -->
+    <test started-at="2025-09-30T20:30:50 IST" name="SCMS_Business_Logic_Validation" finished-at="2025-09-30T20:30:50 IST" duration-ms="871">
+      <class name="com.company.scm.service.OrderServiceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFulfillSalesOrder_Success()[pri:1, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="testFulfillSalesOrder_Success" finished-at="2025-09-30T20:30:50 IST" duration-ms="41" status="FAIL">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[Inventory item for product P001 in warehouse W001 not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+at com.company.scm.service.InventoryService.removeStock(InventoryService.java:61)
+at com.company.scm.service.OrderService.fulfillSalesOrder(OrderService.java:70)
+at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_Success(OrderServiceTest.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFulfillSalesOrder_Success -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFulfillSalesOrder_InsufficientStock_ThrowsException()[pri:2, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="testFulfillSalesOrder_InsufficientStock_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="2" status="FAIL">
+          <exception class="org.testng.TestException">
+            <message>
+              <![CDATA[
+Expected exception of type class com.company.scm.exception.InsufficientStockException but got com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestException: 
+Expected exception of type class com.company.scm.exception.InsufficientStockException but got com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+at org.testng.internal.invokers.ExpectedExceptionsHolder.wrongException(ExpectedExceptionsHolder.java:67)
+at org.testng.internal.invokers.TestInvoker.considerExceptionsInternal(TestInvoker.java:888)
+at org.testng.internal.invokers.TestInvoker.considerExceptions(TestInvoker.java:863)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:742)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+at com.company.scm.service.InventoryService.removeStock(InventoryService.java:61)
+at com.company.scm.service.OrderService.fulfillSalesOrder(OrderService.java:70)
+at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException(OrderServiceTest.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+... 16 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFulfillSalesOrder_InsufficientStock_ThrowsException -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.company.scm.service.OrderServiceTest -->
+      <class name="com.company.scm.service.InventoryServiceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="681" status="FAIL">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testAddStockSuccess" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddStockSuccess -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddStock_ZeroQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testAddStock_ZeroQuantity_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddStock_ZeroQuantity_ThrowsException -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRemoveStockExceedingQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testRemoveStockExceedingQuantity_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="SKIP">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveStockExceedingQuantity_ThrowsException -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRemoveStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testRemoveStockSuccess" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveStockSuccess -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStockTransferUpdatesBothWarehouses -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStockTransferUpdatesBothWarehouses -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStockTransferUpdatesBothWarehouses -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testTransferStock_InvalidDestination_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testTransferStock_InvalidDestination_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <exception class="com.company.scm.exception.EntityNotFoundException">
+            <message>
+              <![CDATA[W001]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+at com.company.scm.service.InventoryService.addStock(InventoryService.java:35)
+at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.company.scm.exception.EntityNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTransferStock_InvalidDestination_ThrowsException -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.company.scm.service.InventoryServiceTest -->
+    </test> <!-- SCMS_Business_Logic_Validation -->
+  </suite> <!-- SupplyChainManagementSystem_Project_Suite -->
+</testng-results>

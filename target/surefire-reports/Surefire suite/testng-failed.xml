@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.company.scm.service.InventoryServiceTest">
+        <methods>
+          <include name="testRemoveStockExceedingQuantity_ThrowsException"/>
+          <include name="testRemoveStockSuccess"/>
+          <include name="setup"/>
+          <include name="testStockTransferUpdatesBothWarehouses"/>
+          <include name="testAddStockSuccess"/>
+          <include name="cleanup"/>
+          <include name="testAddStock_ZeroQuantity_ThrowsException"/>
+          <include name="testTransferStock_InvalidDestination_ThrowsException"/>
+        </methods>
+      </class> <!-- com.company.scm.service.InventoryServiceTest -->
+      <class name="com.company.scm.service.OrderServiceTest">
+        <methods>
+          <include name="cleanup"/>
+          <include name="testFulfillSalesOrder_InsufficientStock_ThrowsException"/>
+          <include name="testFulfillSalesOrder_Success"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.company.scm.service.OrderServiceTest -->
+      <class name="com.company.scm.service.ReportServiceTest">
+        <methods>
+          <include name="testPrintLowStockReport"/>
+          <include name="cleanup"/>
+          <include name="testPrintInventoryReport"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.company.scm.service.ReportServiceTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

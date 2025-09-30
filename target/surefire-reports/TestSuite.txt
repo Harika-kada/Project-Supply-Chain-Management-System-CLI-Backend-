@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 31, Failures: 5, Errors: 0, Skipped: 23, Time elapsed: 1.398 s <<< FAILURE! - in TestSuite
+com.company.scm.service.InventoryServiceTest.setup  Time elapsed: 0.008 s  <<< FAILURE!
+com.company.scm.exception.EntityNotFoundException: W001
+	at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+
+com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_Success  Time elapsed: 0.004 s  <<< FAILURE!
+com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+	at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_Success(OrderServiceTest.java:50)
+
+com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException  Time elapsed: 0.003 s  <<< FAILURE!
+org.testng.TestException: 
+
+Expected exception of type class com.company.scm.exception.InsufficientStockException but got com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+	at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException(OrderServiceTest.java:66)
+
+com.company.scm.service.ReportServiceTest.testPrintInventoryReport  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at com.company.scm.service.ReportServiceTest.testPrintInventoryReport(ReportServiceTest.java:55)
+
+com.company.scm.service.ReportServiceTest.testPrintLowStockReport  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at com.company.scm.service.ReportServiceTest.testPrintLowStockReport(ReportServiceTest.java:65)
+

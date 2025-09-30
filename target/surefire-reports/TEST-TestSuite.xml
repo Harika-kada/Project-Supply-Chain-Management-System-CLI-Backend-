@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="1.398" tests="31" errors="0" skipped="23" failures="5">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Administrator\eclipse-workspace\AmazonJavaLearnings\Supply_Chain_Management_System\target\test-classes;C:\Users\Administrator\eclipse-workspace\AmazonJavaLearnings\Supply_Chain_Management_System\target\classes;C:\Users\Administrator\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\Administrator\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Administrator\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.20.0\log4j-slf4j-impl-2.20.0.jar;C:\Users\Administrator\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\Administrator\AppData\Local\Temp\surefire15645348263416139294\surefirebooter1444389184699122867.jar C:\Users\Administrator\AppData\Local\Temp\surefire15645348263416139294 2025-09-30T20-33-41_178-jvmRun1 surefire2684461509615342916tmp surefire_08839894492829862664tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Administrator\eclipse-workspace\AmazonJavaLearnings\Supply_Chain_Management_System\target\test-classes;C:\Users\Administrator\eclipse-workspace\AmazonJavaLearnings\Supply_Chain_Management_System\target\classes;C:\Users\Administrator\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\Administrator\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Administrator\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.20.0\log4j-slf4j-impl-2.20.0.jar;C:\Users\Administrator\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Administrator\eclipse-workspace\AmazonJavaLearnings\Supply_Chain_Management_System"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Administrator\AppData\Local\Temp\surefire15645348263416139294\surefirebooter1444389184699122867.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.7+6-LTS"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.7+6"/>
+    <property name="localRepository" value="C:\Users\Administrator\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.7"/>
+    <property name="user.dir" value="C:\Users\Administrator\eclipse-workspace\AmazonJavaLearnings\Supply_Chain_Management_System"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\Python313\Scripts\;C:\Program Files\Python313\;C:\Program Files\Java\jdk-11.0.15.1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;%ERLANG_HOME%\bin;C:\Program Files\nodejs\;C:\Program Files\nodejs\node_modules\npm\bin;C:\Java\jdk1.8.0_202\bin;C:\apache-maven-3.9.8\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\apache-jmeter-5.6.3\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\GrafanaLabs\grafana\bin;C:\Prometheus\prometheus-3.3.0.windows-amd64;C:\Program Files (x86)\Micro Focus\LoadRunner\bin\Silk\Silk Performer 21.0;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1\bin;;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\ProgramData\Administrator\GitHubDesktop\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.7+6-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testFindAll" classname="com.company.scm.repository.ProductRepositoryTest" time="0.004">
+    <system-out><![CDATA[20:33:44.053 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+20:33:44.058 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P002
+20:33:44.059 [main] INFO  com.company.scm.util.LoggerUtil - Fetching all 2 product items.
+]]></system-out>
+  </testcase>
+  <testcase name="testFindById_NotFound" classname="com.company.scm.repository.ProductRepositoryTest" time="0">
+    <system-out><![CDATA[20:33:44.062 [main] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+20:33:44.065 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+]]></system-out>
+  </testcase>
+  <testcase name="testFindById_Success" classname="com.company.scm.repository.ProductRepositoryTest" time="0">
+    <system-out><![CDATA[20:33:44.066 [main] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+20:33:44.067 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+]]></system-out>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0.008">
+    <failure message="W001" type="com.company.scm.exception.EntityNotFoundException"><![CDATA[com.company.scm.exception.EntityNotFoundException: W001
+	at com.company.scm.service.InventoryServiceTest.setup(InventoryServiceTest.java:30)
+]]></failure>
+    <system-out><![CDATA[20:33:44.067 [main] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+20:33:44.071 [main] INFO  com.company.scm.util.LoggerUtil - Adding stock to inventory
+]]></system-out>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAddStockSuccess" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="cleanup" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAddStock_ZeroQuantity_ThrowsException" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testRemoveStockExceedingQuantity_ThrowsException" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testRemoveStockSuccess" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testStockTransferUpdatesBothWarehouses[2, 8, 2](1)" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testStockTransferUpdatesBothWarehouses[5, 5, 5](2)" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testStockTransferUpdatesBothWarehouses[10, 0, 10](3)" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testTransferStock_InvalidDestination_ThrowsException" classname="com.company.scm.service.InventoryServiceTest" time="0">
+    <skipped message="W001"/>
+  </testcase>
+  <testcase name="testFulfillSalesOrder_Success" classname="com.company.scm.service.OrderServiceTest" time="0.004">
+    <failure message="Inventory item for product P001 in warehouse W001 not found." type="com.company.scm.exception.EntityNotFoundException"><![CDATA[com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+	at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_Success(OrderServiceTest.java:50)
+]]></failure>
+    <system-out><![CDATA[20:33:44.090 [main] INFO  com.company.scm.util.LoggerUtil - Adding stock to inventory
+20:33:44.095 [main] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+20:33:44.097 [main] INFO  com.company.scm.util.LoggerUtil - --- Creating a Sales order(SO) ---
+20:33:44.099 [main] INFO  com.company.scm.util.LoggerUtil - SalesOrder saved: SO-0522
+20:33:44.099 [main] INFO  com.company.scm.util.LoggerUtil - Removing stock from inventory
+]]></system-out>
+  </testcase>
+  <testcase name="testFulfillSalesOrder_InsufficientStock_ThrowsException" classname="com.company.scm.service.OrderServiceTest" time="0.003">
+    <failure message="&#10;Expected exception of type class com.company.scm.exception.InsufficientStockException but got com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found." type="org.testng.TestException"><![CDATA[org.testng.TestException: 
+
+Expected exception of type class com.company.scm.exception.InsufficientStockException but got com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
+	at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException(OrderServiceTest.java:66)
+]]></failure>
+    <system-out><![CDATA[20:33:44.101 [main] INFO  com.company.scm.util.LoggerUtil - Adding stock to inventory
+20:33:44.101 [main] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+20:33:44.102 [main] INFO  com.company.scm.util.LoggerUtil - --- Creating a Sales order(SO) ---
+20:33:44.102 [main] INFO  com.company.scm.util.LoggerUtil - SalesOrder saved: SO-60BC
+20:33:44.102 [main] INFO  com.company.scm.util.LoggerUtil - Removing stock from inventory
+]]></system-out>
+  </testcase>
+  <testcase name="testPrintInventoryReport" classname="com.company.scm.service.ReportServiceTest" time="0.013">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at com.company.scm.service.ReportServiceTest.testPrintInventoryReport(ReportServiceTest.java:55)
+]]></failure>
+    <system-out><![CDATA[20:33:44.105 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+20:33:44.106 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P002
+20:33:44.106 [main] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+20:33:44.106 [main] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P002-W001
+20:33:44.106 [main] INFO  com.company.scm.util.LoggerUtil - --- Inventory Report ---
+20:33:44.107 [main] INFO  com.company.scm.util.LoggerUtil - Fetching all 2 inventory items.
+20:33:44.115 [main] INFO  com.company.scm.util.LoggerUtil - Product Id: P001
+Product: Laptop
+Quantity: 10
+Warehouse: W001
+20:33:44.115 [main] INFO  com.company.scm.util.LoggerUtil - Product Id: P002
+Product: Monitor
+Quantity: 3
+Warehouse: W001
+20:33:44.116 [main] INFO  com.company.scm.util.LoggerUtil - ----------------------
+]]></system-out>
+  </testcase>
+  <testcase name="testPrintLowStockReport" classname="com.company.scm.service.ReportServiceTest" time="0.002">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at com.company.scm.service.ReportServiceTest.testPrintLowStockReport(ReportServiceTest.java:65)
+]]></failure>
+    <system-out><![CDATA[20:33:44.118 [main] INFO  com.company.scm.util.LoggerUtil - Inventory repository cleared.
+20:33:44.118 [main] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+20:33:44.119 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+20:33:44.119 [main] INFO  com.company.scm.util.LoggerUtil - Product saved: P002
+20:33:44.120 [main] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+20:33:44.120 [main] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P002-W001
+20:33:44.121 [main] INFO  com.company.scm.util.LoggerUtil - --- Low Stock Report (Threshold: 5) ---
+20:33:44.121 [main] INFO  com.company.scm.util.LoggerUtil - Fetching all 2 inventory items.
+20:33:44.121 [main] INFO  com.company.scm.util.LoggerUtil - Product Id: P002
+Product: Monitor
+Quantity: 3
+Warehouse: W001
+20:33:44.122 [main] INFO  com.company.scm.util.LoggerUtil - ----------------------
+]]></system-out>
+  </testcase>
+</testsuite>
