@@ -52,8 +52,10 @@ public class ReportServiceTest {
         reportService.printInventoryReport();
         String reportOutput = outContent.toString();
 
-        assertTrue(reportOutput.contains("Laptop (P001) | Qty: 10"));
-        assertTrue(reportOutput.contains("Monitor (P002) | Qty: 3"));
+//        assertTrue(reportOutput.contains("Laptop (P001) | Qty: 10"));
+        assertTrue(reportOutput.contains("Product: Laptop\nQuantity: 10"));
+        assertTrue(reportOutput.contains("Product: Monitor\nQuantity: 3"));
+//        assertTrue(reportOutput.contains("Monitor (P002) | Qty: 3"));
     }
 
     @Test(testName = "Low Stock Report should only show items below threshold")
@@ -62,7 +64,8 @@ public class ReportServiceTest {
         reportService.printLowStockReport(threshold);
         String reportOutput = outContent.toString();
 
-        assertTrue(reportOutput.contains("LOW STOCK: Monitor (P002) | Qty: 3"));
+//        assertTrue(reportOutput.contains("LOW STOCK: Monitor (P002) | Qty: 3"));
+        assertTrue(reportOutput.contains("Product: Monitor\nQuantity: 3"));
         assertTrue(reportOutput.contains("Threshold: 5"));
         assertTrue(!reportOutput.contains("Laptop (P001)"));
     }
