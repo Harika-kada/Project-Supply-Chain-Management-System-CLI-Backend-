@@ -12,7 +12,7 @@ public class InventoryItem {
     public InventoryItem(String productId, String warehouseId, int quantity, LocalDate lastRestockedDate) {
         this.productId = productId;
         this.warehouseId = warehouseId;
-        this.itemId = productId + "-" + warehouseId;
+        this.itemId = productId + "_" + warehouseId;
         this.quantity = quantity;
         this.lastRestockedDate = lastRestockedDate;
     }
