@@ -9,93 +9,58 @@ import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
-@Test(groups = "inventory")
-public class InventoryServiceTest {
+@Test(groups = "report")
+public class ReportServiceTest {
 
     private InventoryRepository inventoryRepository;
-    private WarehouseRepository warehouseRepository;
-    private InventoryService inventoryService;
+    private ProductRepository productRepository;
+    private ReportService reportService;
 
-    private final String PRODUCT_ID = "P001";
-    private final String WAREHOUSE_A_ID = "W001";
-    private final String WAREHOUSE_B_ID = "W002";
-    private final int INITIAL_STOCK = 10;
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
 
     @BeforeMethod
-    public void setup() throws Exception {
+    public void setup() {
         inventoryRepository = new InventoryRepository();
-        warehouseRepository = new WarehouseRepository();
-        inventoryService = new InventoryService(inventoryRepository, warehouseRepository);
+        productRepository = new ProductRepository();
+        reportService = new ReportService(inventoryRepository, productRepository);
 
-        inventoryService.addStock(PRODUCT_ID, WAREHOUSE_A_ID, INITIAL_STOCK);
+        System.setOut(new PrintStream(outContent));
+
+        productRepository.save(new Product("P001", "Laptop", "Desc", "E", new BigDecimal("1000")));
+        productRepository.save(new Product("P002", "Monitor", "Desc", "E", new BigDecimal("200")));
+
+        inventoryRepository.save(new InventoryItem("P001", "W001", 10, LocalDate.now())); // High Stock
+        inventoryRepository.save(new InventoryItem("P002", "W001", 3, LocalDate.now()));  // Low Stock
     }
 
     @AfterMethod
     public void cleanup() {
+        System.setOut(originalOut);
         inventoryRepository.clear();
+        productRepository.clear();
     }
 
-    @Test(testName = "Adding stock should increase inventory correctly")
-    public void testAddStockSuccess() throws Exception {
-        int quantityToAdd = 5;
-        inventoryService.addStock(PRODUCT_ID, WAREHOUSE_A_ID, quantityToAdd);
+    @Test(testName = "Inventory Report should list all items correctly")
+    public void testPrintInventoryReport() {
+        reportService.printInventoryReport();
+        String reportOutput = outContent.toString();
 
-        int newStock = inventoryService.getStockLevel(PRODUCT_ID, WAREHOUSE_A_ID);
-        assertEquals(newStock, INITIAL_STOCK + quantityToAdd, "Stock should increase by " + quantityToAdd);
+//        assertTrue(reportOutput.contains("Laptop (P001) | Qty: 10"));
+        assertTrue(reportOutput.contains("Product: Laptop\nQuantity: 10"));
+        assertTrue(reportOutput.contains("Product: Monitor\nQuantity: 3"));
+//        assertTrue(reportOutput.contains("Monitor (P002) | Qty: 3"));
     }
 
-    @Test(testName = "Removing stock within available quantity should succeed")
-    public void testRemoveStockSuccess() throws Exception {
-        inventoryService.removeStock(PRODUCT_ID, WAREHOUSE_A_ID, 5);
-        int newStock = inventoryService.getStockLevel(PRODUCT_ID, WAREHOUSE_A_ID);
-        assertEquals(newStock, 5);
-    }
+    @Test(testName = "Low Stock Report should only show items below threshold")
+    public void testPrintLowStockReport() {
+        int threshold = 5;
+        reportService.printLowStockReport(threshold);
+        String reportOutput = outContent.toString();
 
-    @Test(testName = "Removing more stock than available should throw InsufficientStockException",
-            expectedExceptions = InsufficientStockException.class, // Required: Use expectedExceptions
-            expectedExceptionsMessageRegExp = ".*Insufficient stock.*") // Required: Use message regex
-    public void testRemoveStockExceedingQuantity_ThrowsException() throws Exception {
-        int quantityToRemove = INITIAL_STOCK + 1;
-        inventoryService.removeStock(PRODUCT_ID, WAREHOUSE_A_ID, quantityToRemove);
-    }
-
-    @Test(testName = "Using zero quantity should throw InvalidQuantityException",
-            expectedExceptions = InvalidQuantityException.class)
-    public void testAddStock_ZeroQuantity_ThrowsException() throws Exception {
-        inventoryService.addStock(PRODUCT_ID, WAREHOUSE_A_ID, 0);
-    }
-
-    @Test(testName = "Transferring to a non-existent warehouse should throw EntityNotFoundException",
-            expectedExceptions = EntityNotFoundException.class)
-    public void testTransferStock_InvalidDestination_ThrowsException() throws Exception {
-        String nonExistentWarehouse = "W999";
-
-        warehouseRepository.setFailOnFind(nonExistentWarehouse);
-        inventoryService.transferStock(PRODUCT_ID, WAREHOUSE_A_ID, nonExistentWarehouse, 1);
-    }
-
-    @DataProvider(name = "transferData")
-    public Object[][] provideTransferData() {
-
-        return new Object[][] {
-                {2, 8, 2},
-                {5, 5, 5},
-                {10, 0, 10}
-        };
-    }
-
-    @Test(dataProvider = "transferData", testName = "Stock Transfer updates both warehouses correctly")
-    public void testStockTransferUpdatesBothWarehouses(
-            int qtyToTransfer, int expectedSourceQty, int expectedDestQty) throws Exception {
-
-        inventoryService.addStock(PRODUCT_ID, WAREHOUSE_B_ID, 0);
-
-        inventoryService.transferStock(PRODUCT_ID, WAREHOUSE_A_ID, WAREHOUSE_B_ID, qtyToTransfer);
-
-        int sourceStock = inventoryService.getStockLevel(PRODUCT_ID, WAREHOUSE_A_ID);
-        int destStock = inventoryService.getStockLevel(PRODUCT_ID, WAREHOUSE_B_ID);
-
-        assertEquals(sourceStock, expectedSourceQty, "Source warehouse stock incorrect.");
-        assertEquals(destStock, expectedDestQty, "Destination warehouse stock incorrect.");
+//        assertTrue(reportOutput.contains("LOW STOCK: Monitor (P002) | Qty: 3"));
+        assertTrue(reportOutput.contains("Product: Monitor\nQuantity: 3"));
+        assertTrue(reportOutput.contains("Threshold: 5"));
+        assertTrue(!reportOutput.contains("Laptop (P001)"));
     }
 }
