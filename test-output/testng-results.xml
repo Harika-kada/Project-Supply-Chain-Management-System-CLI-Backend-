@@ -2,20 +2,20 @@
 <testng-results ignored="2" total="17" passed="3" failed="4" skipped="8">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-30T20:30:50 IST" name="SupplyChainManagementSystem_Project_Suite" finished-at="2025-09-30T20:30:50 IST" duration-ms="871">
+  <suite started-at="2025-09-30T23:56:33 IST" name="SupplyChainManagementSystem_Project_Suite" finished-at="2025-09-30T23:56:34 IST" duration-ms="1138">
     <groups>
       <group name="report">
-        <method signature="ReportServiceTest.testPrintInventoryReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" name="testPrintInventoryReport" class="com.company.scm.service.ReportServiceTest"/>
-        <method signature="ReportServiceTest.testPrintLowStockReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" name="testPrintLowStockReport" class="com.company.scm.service.ReportServiceTest"/>
+        <method signature="ReportServiceTest.testPrintInventoryReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" name="testPrintInventoryReport" class="com.company.scm.service.ReportServiceTest"/>
+        <method signature="ReportServiceTest.testPrintLowStockReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" name="testPrintLowStockReport" class="com.company.scm.service.ReportServiceTest"/>
       </group> <!-- report -->
       <group name="orders">
         <method signature="OrderServiceTest.testFulfillSalesOrder_Success()[pri:1, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" name="testFulfillSalesOrder_Success" class="com.company.scm.service.OrderServiceTest"/>
         <method signature="OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException()[pri:2, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" name="testFulfillSalesOrder_InsufficientStock_ThrowsException" class="com.company.scm.service.OrderServiceTest"/>
       </group> <!-- orders -->
       <group name="repository">
-        <method signature="ProductRepositoryTest.testFindAll()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" name="testFindAll" class="com.company.scm.repository.ProductRepositoryTest"/>
-        <method signature="ProductRepositoryTest.testFindById_NotFound()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" name="testFindById_NotFound" class="com.company.scm.repository.ProductRepositoryTest"/>
-        <method signature="ProductRepositoryTest.testFindById_Success()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" name="testFindById_Success" class="com.company.scm.repository.ProductRepositoryTest"/>
+        <method signature="ProductRepositoryTest.testFindAll()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" name="testFindAll" class="com.company.scm.repository.ProductRepositoryTest"/>
+        <method signature="ProductRepositoryTest.testFindById_NotFound()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" name="testFindById_NotFound" class="com.company.scm.repository.ProductRepositoryTest"/>
+        <method signature="ProductRepositoryTest.testFindById_Success()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" name="testFindById_Success" class="com.company.scm.repository.ProductRepositoryTest"/>
       </group> <!-- repository -->
       <group name="inventory">
         <method signature="InventoryServiceTest.testAddStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testAddStockSuccess" class="com.company.scm.service.InventoryServiceTest"/>
@@ -26,13 +26,13 @@
         <method signature="InventoryServiceTest.testTransferStock_InvalidDestination_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" name="testTransferStock_InvalidDestination_ThrowsException" class="com.company.scm.service.InventoryServiceTest"/>
       </group> <!-- inventory -->
     </groups>
-    <test started-at="2025-09-30T20:30:50 IST" name="SCMS_Repository_And_Reporting_UnitTests" finished-at="2025-09-30T20:30:50 IST" duration-ms="845">
+    <test started-at="2025-09-30T23:56:33 IST" name="SCMS_Repository_And_Reporting_UnitTests" finished-at="2025-09-30T23:56:34 IST" duration-ms="1131">
       <class name="com.company.scm.service.ReportServiceTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testPrintInventoryReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="testPrintInventoryReport" finished-at="2025-09-30T20:30:50 IST" duration-ms="27" status="FAIL">
+        <test-method signature="testPrintInventoryReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" started-at="2025-09-30T23:56:34 IST" name="testPrintInventoryReport" finished-at="2025-09-30T23:56:34 IST" duration-ms="25" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -72,15 +72,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPrintInventoryReport -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testPrintLowStockReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="testPrintLowStockReport" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="FAIL">
+        <test-method signature="testPrintLowStockReport()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" started-at="2025-09-30T23:56:34 IST" name="testPrintLowStockReport" finished-at="2025-09-30T23:56:34 IST" duration-ms="2" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -120,64 +120,64 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPrintLowStockReport -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.ReportServiceTest@5b799640]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.ReportServiceTest@4201c465]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
       </class> <!-- com.company.scm.service.ReportServiceTest -->
       <class name="com.company.scm.repository.ProductRepositoryTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="681" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:33 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="805" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testFindAll()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="testFindAll" finished-at="2025-09-30T20:30:50 IST" duration-ms="7" status="PASS">
+        <test-method signature="testFindAll()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="testFindAll" finished-at="2025-09-30T23:56:34 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindAll -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method signature="testFindById_NotFound()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="testFindById_NotFound" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFindById_NotFound()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="testFindById_NotFound" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindById_NotFound -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testFindById_Success()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="testFindById_Success" finished-at="2025-09-30T20:30:50 IST" duration-ms="14" status="PASS">
+        <test-method signature="testFindById_Success()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="testFindById_Success" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindById_Success -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@4201c465]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.repository.ProductRepositoryTest@7a5ceedd]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
       </class> <!-- com.company.scm.repository.ProductRepositoryTest -->
     </test> <!-- SCMS_Repository_And_Reporting_UnitTests -->
-    <test started-at="2025-09-30T20:30:50 IST" name="SCMS_Business_Logic_Validation" finished-at="2025-09-30T20:30:50 IST" duration-ms="871">
+    <test started-at="2025-09-30T23:56:33 IST" name="SCMS_Business_Logic_Validation" finished-at="2025-09-30T23:56:34 IST" duration-ms="1138">
       <class name="com.company.scm.service.OrderServiceTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testFulfillSalesOrder_Success()[pri:1, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="testFulfillSalesOrder_Success" finished-at="2025-09-30T20:30:50 IST" duration-ms="41" status="FAIL">
+        <test-method signature="testFulfillSalesOrder_Success()[pri:1, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T23:56:34 IST" name="testFulfillSalesOrder_Success" finished-at="2025-09-30T23:56:34 IST" duration-ms="40" status="FAIL">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[Inventory item for product P001 in warehouse W001 not found.]]>
             </message>
             <full-stacktrace>
               <![CDATA[com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
-at com.company.scm.service.InventoryService.removeStock(InventoryService.java:61)
+at com.company.scm.service.InventoryService.removeStock(InventoryService.java:62)
 at com.company.scm.service.OrderService.fulfillSalesOrder(OrderService.java:70)
 at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_Success(OrderServiceTest.java:50)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -208,15 +208,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFulfillSalesOrder_Success -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testFulfillSalesOrder_InsufficientStock_ThrowsException()[pri:2, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="testFulfillSalesOrder_InsufficientStock_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="2" status="FAIL">
+        <test-method signature="testFulfillSalesOrder_InsufficientStock_ThrowsException()[pri:2, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T23:56:34 IST" name="testFulfillSalesOrder_InsufficientStock_ThrowsException" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="FAIL">
           <exception class="org.testng.TestException">
             <message>
               <![CDATA[
@@ -246,7 +246,7 @@ at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecuto
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 at java.base/java.lang.Thread.run(Thread.java:840)
 Caused by: com.company.scm.exception.EntityNotFoundException: Inventory item for product P001 in warehouse W001 not found.
-at com.company.scm.service.InventoryService.removeStock(InventoryService.java:61)
+at com.company.scm.service.InventoryService.removeStock(InventoryService.java:62)
 at com.company.scm.service.OrderService.fulfillSalesOrder(OrderService.java:70)
 at com.company.scm.service.OrderServiceTest.testFulfillSalesOrder_InsufficientStock_ThrowsException(OrderServiceTest.java:66)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -262,13 +262,13 @@ at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFulfillSalesOrder_InsufficientStock_ThrowsException -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.OrderServiceTest@33bc72d1]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
       </class> <!-- com.company.scm.service.OrderServiceTest -->
       <class name="com.company.scm.service.InventoryServiceTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="681" status="FAIL">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:33 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="806" status="FAIL">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[W001]]>
@@ -309,7 +309,7 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testAddStockSuccess" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testAddStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testAddStockSuccess" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[W001]]>
@@ -350,15 +350,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddStockSuccess -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddStock_ZeroQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testAddStock_ZeroQuantity_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testAddStock_ZeroQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testAddStock_ZeroQuantity_ThrowsException" finished-at="2025-09-30T23:56:34 IST" duration-ms="1" status="SKIP">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[W001]]>
@@ -399,15 +399,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddStock_ZeroQuantity_ThrowsException -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testRemoveStockExceedingQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testRemoveStockExceedingQuantity_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="SKIP">
+        <test-method signature="testRemoveStockExceedingQuantity_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testRemoveStockExceedingQuantity_ThrowsException" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[W001]]>
@@ -448,15 +448,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoveStockExceedingQuantity_ThrowsException -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testRemoveStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testRemoveStockSuccess" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testRemoveStockSuccess()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testRemoveStockSuccess" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[W001]]>
@@ -497,15 +497,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoveStockSuccess -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -563,15 +563,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStockTransferUpdatesBothWarehouses -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -629,15 +629,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStockTransferUpdatesBothWarehouses -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T20:30:50 IST" duration-ms="1" status="SKIP">
+        <test-method signature="testStockTransferUpdatesBothWarehouses(int,int,int)[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testStockTransferUpdatesBothWarehouses" data-provider="transferData" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -695,15 +695,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStockTransferUpdatesBothWarehouses -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="setup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="setup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testTransferStock_InvalidDestination_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="testTransferStock_InvalidDestination_ThrowsException" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testTransferStock_InvalidDestination_ThrowsException()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="testTransferStock_InvalidDestination_ThrowsException" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <exception class="com.company.scm.exception.EntityNotFoundException">
             <message>
               <![CDATA[W001]]>
@@ -744,7 +744,7 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTransferStock_InvalidDestination_ThrowsException -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T20:30:50 IST" name="cleanup" finished-at="2025-09-30T20:30:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.company.scm.service.InventoryServiceTest@2af004b]" started-at="2025-09-30T23:56:34 IST" name="cleanup" finished-at="2025-09-30T23:56:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->

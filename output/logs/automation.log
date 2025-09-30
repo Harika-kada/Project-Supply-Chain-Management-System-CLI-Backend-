@@ -96,3 +96,52 @@ Warehouse: W001
 20:33:44.122 [main] INFO  com.company.scm.util.LoggerUtil - ----------------------
 20:33:44.123 [main] INFO  com.company.scm.util.LoggerUtil - Inventory repository cleared.
 20:33:44.123 [main] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+23:56:34.179 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+23:56:34.178 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Adding stock to inventory
+23:56:34.189 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P002
+23:56:34.189 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Fetching all 2 product items.
+23:56:34.289 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+23:56:34.291 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+23:56:34.293 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+23:56:34.294 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+23:56:34.297 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+23:56:34.345 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+23:56:34.346 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P002
+23:56:34.388 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Adding stock to inventory
+23:56:34.408 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+23:56:34.414 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+23:56:34.416 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P002-W001
+23:56:34.425 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - --- Inventory Report ---
+23:56:34.426 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Fetching all 2 inventory items.
+23:56:34.425 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - --- Creating a Sales order(SO) ---
+23:56:34.433 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product Id: P001
+Product: Laptop
+Quantity: 10
+Warehouse: W001
+23:56:34.434 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product Id: P002
+Product: Monitor
+Quantity: 3
+Warehouse: W001
+23:56:34.434 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - ----------------------
+23:56:34.444 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Inventory repository cleared.
+23:56:34.444 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+23:56:34.445 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P001
+23:56:34.446 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product saved: P002
+23:56:34.446 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+23:56:34.446 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P002-W001
+23:56:34.447 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - --- Low Stock Report (Threshold: 5) ---
+23:56:34.447 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Fetching all 2 inventory items.
+23:56:34.447 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product Id: P002
+Product: Monitor
+Quantity: 3
+Warehouse: W001
+23:56:34.447 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - ----------------------
+23:56:34.449 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - SalesOrder saved: SO-EC95
+23:56:34.449 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Removing stock from inventory
+23:56:34.449 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Inventory repository cleared.
+23:56:34.449 [TestNG-tests-2] INFO  com.company.scm.util.LoggerUtil - Product repository cleared.
+23:56:34.452 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Adding stock to inventory
+23:56:34.452 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Inventory item saved/updated: P001-W001
+23:56:34.453 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - --- Creating a Sales order(SO) ---
+23:56:34.453 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - SalesOrder saved: SO-7FF3
+23:56:34.454 [TestNG-tests-1] INFO  com.company.scm.util.LoggerUtil - Removing stock from inventory
